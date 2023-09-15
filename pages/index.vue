@@ -10,10 +10,10 @@
   </main>
 </template>
 <script setup lang="ts">
-const result = ref("?");
+const result = ref<string>("?");
 const clickBtn = () => {
-  const results = ref(["大吉", "中吉", "小吉", "凶"]);
-  const n = ref(Math.floor(Math.random() * results.value.length));
+  const results = ref<string[]>(["大吉", "中吉", "小吉", "凶"]);
+  const n = ref<number>(Math.floor(Math.random() * results.value.length));
   result.value = results.value[n.value];
 };
 </script>
